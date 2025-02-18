@@ -1,87 +1,112 @@
 <!DOCTYPE html>
-<div>
-    <h1> WikiLeaks</h1>
-</div>
-<p> 
-    <html>
-        <head>
-            <title>WikiLeaks</title>
-        </head>
-        <body>
-            <div>
-            <input  type="text"  value="" placeholder="Search Keywords">
-            </div>
+<html>
+<head>
+    <title>WikiLeaks</title>
+    <style>
+        
 
-            <div>
-                <ul>
-                    <br> Intelligence   Global economy   International politics  Corporations  Government War & Military
-                </ul>
-            </div>
+        #search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px; 
+        }
 
-            <br> <h2>Featured</h2>
-            <ul>
-                <li>
-                    <div>
-                        <img src="https://wikileaks.org/static/img/Wikileaks_Nazi_org_in_Spain.jpeg" width="360" height="240"> 
-                    </div>
-                    <div>  
-                        <h2>The intolerance network </h2>
-                        <div>
-                            <p>
-                                Today, 5th August 2021, WikiLeaks publishes "The Intolerance Network" over 17,000 documents from internationally active right wing campaigning organisations HazteOir and CitizenGO. 
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://wikileaks.org/IMG/arton716.jpg" width="360" height="240">
-                    </div>
-                    <div>
-                        <h2> Fishrot</h2>
-                        <div>
-                            <p>
-                                Today, November 12, WikiLeaks publishes over 30000 documents from SAMHERJI
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://wikileaks.org/IMG/arton715.png" width="360" height="240">
-                    </div>
-                    <div>
-                        <h2> OPCW Douma</h2>
-                        <div>
-                            <p>
-                                Today, October 23, WikiLeaks publishes a statement made by a panel that listened to testimony and reviewed evidence from a whistleblower from the OPCW (update)
-                            </p>
-                        </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://wikileaks.org/IMG/rubon33.png" width="360" height="240">
-                    </div>
-                    <div>
-                        <h2> Pope's Orders </h2>
-                        <div>
-                            <p>
-                                Today, January 30th WikiLeaks publishes a set of documents from the Catholic Church, shedding light on the power struggle within highest offices
-                            </p>
-                        </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="https://wikileaks.org/IMG/arton706.jpg" width="360" height="240">
-                    </div>
-                    <div>
-                        <h2> US Embassy Shopping List</h2>
-                        <div>
-                            <p>
-                                Today, 21 December 2018, WikiLeaks publishes a searchable database of more than 16,000 procurement requests posted by United States embassies around the world.
-                            </p>
-                        </div>
-                </li>
-            </ul>
-        </body>
-    </html>
+        input { 
+            width: 600px;           
+            padding: 15px;           
+            font-size: 16px;         
+            border: 1px solid #c1bcbc;  
+            border-radius: 5px; 
+            letter-spacing: 2px;     
+        }
+
+        #menu {
+            display: flex;          
+            justify-content: space-evenly;
+            align-items: center;                     
+            padding: 10px;
+            color: #093a41;
+            font-weight: bold;
+            box-sizing: inherit;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        h2{
+            font-size: 1.9em;
+        }
+       
+        h1{
+            background: none;
+            border-bottom: 0;
+            font-size: 1.9em;
+            font-weight: normal;
+            line-height: 1.1em;
+            margin: 0 auto;
+            padding: 0;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            letter-spacing: normal;
+            color: #093a41;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id ="encabezado">
+        <h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Wikileaks_logo.svg/887px-Wikileaks_logo.svg.png" width="30" height="60">
+            WikiLeaks
+        </h1>
+
+    </div>
+
+    <div id="search-container">
+        <input type="text" placeholder="Search Keywords">
+    </div>
+
+    <div id="menu">
+        <h3>Intelligence</h3>
+        <h3>Global economy</h3>
+        <h3>International politics</h3>
+        <h3>Corporations</h3>
+        <h3>Government</h3>
+        <h3>War and military</h3>
+    </div>
+
+    <br> <h2>Featured</h2>
+    <ul>
+        <li>
+            <div>
+                <img src="https://wikileaks.org/static/img/Wikileaks_Nazi_org_in_Spain.jpeg" width="360" height="240"> 
+            </div>
+            <div>  
+                <h2>The intolerance network </h2>
+                <p>Today, 5th August 2021, WikiLeaks publishes "The Intolerance Network" over 17,000 documents from internationally active right wing campaigning organisations HazteOir and CitizenGO.</p>
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="https://wikileaks.org/IMG/arton716.jpg" width="360" height="240">
+            </div>
+            <div>
+                <h2> Fishrot</h2>
+                <p>Today, November 12, WikiLeaks publishes over 30000 documents from SAMHERJI.</p>
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="https://wikileaks.org/IMG/arton715.png" width="360" height="240">
+            </div>
+            <div>
+                <h2> OPCW Douma</h2>
+                <p>Today, October 23, WikiLeaks publishes a statement made by a panel that listened to testimony and reviewed evidence from a whistleblower from the OPCW (update).</p>
+            </div>
+        </li>
+        <li>
+            <div
+
