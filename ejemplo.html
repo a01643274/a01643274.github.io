@@ -11,13 +11,61 @@
         
     </body>
     <script>
-        let x = 10;
-        console.log(x);
-        let p = {"titulo": "Llano en llamas", "autor": "Juan Rulfo"};
-        const triplicar = a => { return 3*a } ;    
-        console.log(triplicar(x));
-        console.log(p.titulo);
-        console.log(p.autor);
+        async function veAlMuseo(){ 
+            let respuesta = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects/437139")
+    
+            let respuestaJSON   = await respuesta.json();
+            console.log(respuestaJSON.primaryImage);
+            
+        }
+       
+        async function veASpotify() {
+            let r = await fetch("https://accounts.spotify.com/api/token", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({
+                    grant_type: 'client_credentials',
+                    client_id: '6e5eb6eeb9fd4742a004eca7b798ea01',  
+                    client_secret: 'c265581cb5a84e52b6ce65fe24bfabf6'
+                })
+            })
+            let rJSON = await r.json();
+            console.log(rJSON);
+        }
+
+
+        veASpotify();
+        
+        document.getElementsByTagName("h1");
+        let h = document.getElementsByTagName("h1");
+        console.log(h);
+
+        let i = document.getElementById("encabezado");
+        console.log(i);
+
+        let j = document.getElementsByClassName("titulo");
+        console.log(j);
+
+        let k = document.querySelector("h1");
+        console.log(k);
+
+        let l = document.createElement("h2");
+        l.innerHTML = "La CIA espía a los ciudadanos";
+        document.body.appendChild(l);
+
+        let m = document.createTextNode("En los ultimos años la CIA asigna un agente a cada ciudadano para vigilarlos"); 
+
+        document.body.appendChild(m);
+        l.setAttribute( "class", "titulo");
+        l.style.fontSize = "30px";
+        l.style.textAlign = "center";
+
+        encabezado.style.backgroundColor = "antiquewhite";
+
+        document.addEventListener("click", function(){
+            console.log("Tu agente de la CIA dice hola");
+        });
+        
     </script>
 
 </html>
