@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel = "stylesheet" href = "CSS/estilos.css">
     </head>
     <body>
         <div id = "encabezado">
@@ -10,7 +11,8 @@
         </div>
         
     </body>
-    <script>
+    <script src = "JS/spotify.js">
+
         async function veAlMuseo(){ 
             let respuesta = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects/437139")
     
@@ -18,26 +20,8 @@
             console.log(respuestaJSON.primaryImage);
             
         }
-       
-        async function veASpotify() {
-            let r = await fetch("https://accounts.spotify.com/api/token", {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams({
-                    grant_type: 'client_credentials',
-                    client_id: '6e5eb6eeb9fd4742a004eca7b798ea01',  
-                    client_secret: 'c265581cb5a84e52b6ce65fe24bfabf6'
-                })
-            })
-            let rJSON = await r.json();
-            console.log(rJSON);
-        }
-
-
-        veASpotify();
 
         /*
-        
         document.getElementsByTagName("h1");
         let h = document.getElementsByTagName("h1");
         console.log(h);
