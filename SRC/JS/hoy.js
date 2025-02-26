@@ -33,10 +33,10 @@ async function autorizarToken(){
     })
     const datos = await tracks.json();
     console.log(datos);
-    
-    document.body.appendChild(document.createElement('h1')).textContent = 'Top 20 canciones';
 
-    for (let i = 0; i < 20; i++){
+    document.body.appendChild(document.createElement('h1')).textContent = 'Top 5 canciones';
+
+    for (let i = 0; i < 5; i++){
         const track = datos.items[i].name;
         document.body.appendChild(document.createElement('p')).textContent = [i+1] + '. ' + track;
     }
