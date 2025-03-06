@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Escuelas</title>
+</head>
+<body>
+    <h1>Lista de escuelas</h1>
+    
+    <a href="/SRC/Actividad4_5/bienvenida.html">Bienvenida</a> | 
+    <a href="/SRC/Actividad4_5/donantes.html">Donantes</a>
+
+    <script>
+        async function obtenerEscuelas() {
+            // Agregar el URL adecuado
+            const listaEscuelas = await fetch("/api/escuelas");
+            const jsonLE = await listaEscuelas.json();
+            console.log(jsonLE);
+            
+            // Muestra las escuelas en el HTML
+            const lista = document.createElement('ul');
+            jsonLE.forEach(escuela => {
+                const item = document.createElement('li');
+                item.textContent = `${escuela.nombre} - ${escuela.direccion}`;
+                lista.appendChild(item);
+            });
+            document.body.appendChild(lista);
+        }
+        obtenerEscuelas();
+    </script>
+</body>
+</html>
