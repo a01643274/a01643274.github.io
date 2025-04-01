@@ -2,7 +2,6 @@ import mysql from 'mysql2';
 const connection = mysql.createConnection({
     host: 'mysql-6bea1be-tec-6589.l.aivencloud.com',
     user: 'avnadmin',
-    password: '',
     database: 'defaultdb',
     port: 21394
 });
